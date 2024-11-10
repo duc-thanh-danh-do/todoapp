@@ -1,8 +1,7 @@
-/*import './Home.css'
+import './Home.css'
 import { useEffect, useState } from 'react';
-import './App.css';
 import axios from 'axios';
-import Row from './components/Row.js'
+import Row from '../components/Row.js'
 
 const url = 'http://localhost:3001'
 
@@ -69,5 +68,4 @@ function Home() {
   );
 }
 
-export default App;
-*/
+export default Home;
