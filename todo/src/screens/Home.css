@@ -1,7 +1,35 @@
 #container {
+    max-width: 600px;
+    margin: 20px auto;
     padding:16px;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Title styling */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
   }
   
+  /* Task input form styling */
+  form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  /* Task input styling */
+  input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+
   li{
     margin-bottom: 8px;
   }

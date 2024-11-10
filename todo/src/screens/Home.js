@@ -48,7 +48,7 @@ function Home() {
 
   return (
     <div>
-      <h3>Todos</h3>
+      <h1>Todos</h1>
       <form>
         <input 
           placeholder='Add new task'
