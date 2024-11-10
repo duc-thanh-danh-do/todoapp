@@ -1,11 +1,14 @@
 import dotenv from 'dotenv'
-
-dotenv.config()
-
 import express from 'express'
 import cors from 'cors'
 import { router as todoRouter } from './routers/todoRouter.js'
 import { router as useRouter } from './routers/userRouter.js'
+
+dotenv.config()
+console.log('Environment:', process.env.NODE_ENV);
+console.log('Database:', process.env.NODE_ENV === 'development' ? process.env.DB_NAME : process.env.TEST_DB_NAME);
+console.log('JWT_SECRET_KEY:', process.env.JWT_SECRET_KEY);
+
 const port = process.env.PORT;
 
 const app = express()

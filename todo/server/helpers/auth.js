@@ -1,4 +1,4 @@
-/*import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 const { verify } = jwt
 const authorizationRequired = "Authorization required"
 const invalidCredentials = "Invalid credentials"
@@ -10,9 +10,11 @@ const auth = (req, res, next) => {
     } else {
         try {
             const token = req.headers.authorization
+            console.log('Received token:', token)
             jwt.verify(token, process.env.JWT_SECRET_KEY)
             next()
-        } catch (error) {
+        } catch (err) {
+            console.error('JWT verification failed:', err.message);
             res.statusMessage = invalidCredentials
             res.status(403).json({message: invalidCredentials})
         }

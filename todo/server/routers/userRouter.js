@@ -33,7 +33,7 @@ router.post('/login', (req, res, next) => {
             (error,result) => {
                 if (error) next(error)
                 if (result.rowCount === 0) return next(new Error(invalid_message))
-                    compare(req.body.password,result.rows[0].password, (error, match) => {
+                    compare(req.body.password, result.rows[0].password, (error, match) => {
                         if (error) return next(error)
                         if (!match) return next(new Error(invalid_message))
                         const token = sign({user: req.body.email},process.env.JWT_SECRET_KEY)
